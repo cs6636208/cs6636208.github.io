@@ -25,12 +25,16 @@
           * </span
         ><br />
 
-        <label>โทรศัพท์: </label><br />
-        <input type="tel" name="phone" value="+66" pattern="^\+66\d{9}$" /><span
-          style="color: black"
-        >
-          *</span
-        ><br />
+        <label for="phone">โทรศัพท์: </label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value="+66"
+          pattern="^\+66\d{9}$"
+          required
+        /><span style="color: black">*</span><br />
+
         <label>ที่อยู่:</label><br />
         <textarea name="address" rows="5" cols="40"></textarea><br />
 
@@ -53,8 +57,14 @@
         <input type="text" name="username" pattern="[A-Za-z0-9_]{8,}" />
         <div><i>ประกอบด้วยตัวเลข ตัวอักษรหรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i></div>
         <br />
-        <label>Password:</label><br />
-        <input type="text" name="password" pattern=".{8,}" />
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern=".{8,}"
+          required
+        />
         <div><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></div>
       </fieldset>
       <br />
@@ -71,12 +81,27 @@
         <input type="date" name="travel_date" /><br />
         <label>จำนวนผู้เดินทาง : </label>
         <input type="number" name="people" min="1" max="10" /><br />
-        <label>เน้นการท่องเที่ยวแบบใด?</label><br />
-        <input type="checkbox" name="travel_type0" value="shopping" />
+        <label for="travel_type0">เน้นการท่องเที่ยวแบบใด?</label><br />
+        <input
+          type="checkbox"
+          id="travel_type0"
+          name="travel_type0"
+          value="shopping"
+        />
         ชอปปิ้ง<br />
-        <input type="checkbox" name="travel_type1" value="nature" />
+        <input
+          type="checkbox"
+          id="travel_type1"
+          name="travel_type1"
+          value="nature"
+        />
         ธรรมชาติ<br />
-        <input type="checkbox" name="travel_type2" value="sea" />
+        <input
+          type="checkbox"
+          id="travel_type2"
+          name="travel_type2"
+          value="sea"
+        />
         ทะเล<br />
       </fieldset>
       <br />
