@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Form Exercise</title>
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+      }
+      button {
+        margin-top: 20px;
+      }
+      button img {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="loginpagesuccess.html" method="get">
+      <table>
+        <tbody>
+          <tr>
+            <td>Username:</td>
+            <td>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                autofocus
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td>
+              <input type="text" id="password" name="password" required />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              กรุณาพิมพ์ตามตัวเลขที่ปรากฏ:<br />
+              1599
+              <br />
+              <input
+                type="text"
+                id="verification"
+                name="verification"
+                pattern="1599"
+                required
+              />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button type="submit"><img src="login.jpg" /></button>
+    </form>
+  </body>
+</html>

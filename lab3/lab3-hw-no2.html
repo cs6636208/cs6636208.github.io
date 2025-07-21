@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3no2</title>
+  </head>
+  <body>
+    <h2>แบบฟอร์มจองทัวร์</h2>
+
+    <form action="../form-echo.php" method="post">
+      <fieldset>
+        <legend>ข้อมูลทั่วไป</legend>
+        <label>ชื่อ-สกุล: </label>
+        <br />
+        <input
+          type="text"
+          name="fullname"
+          placeholder="กรอกชื่อ-สกุล"
+          required
+        /><span style="color: black"> * </span><br />
+
+        <label>Email: </label><br />
+        <input type="email" name="email" required /><span style="color: black">
+          * </span
+        ><br />
+
+        <label>โทรศัพท์: </label><br />
+        <input type="tel" name="phone" value="+66" pattern="^\+66\d{9}$" /><span
+          style="color: black"
+        >
+          *</span
+        ><br />
+        <label>ที่อยู่:</label><br />
+        <textarea name="address" rows="5" cols="40"></textarea><br />
+
+        <label>รหัสไปรษณีย์:</label>
+        <input
+          type="text"
+          name="zipcode"
+          pattern="\d{5}"
+          title="กรอกรหัสไปรษณีย์ 5 หลัก"
+        /><br />
+
+        <label>รูปผู้จอง:</label>
+        <input type="file" name="photo" accept="image/*" /><br />
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>ข้อมูลเข้าสู่ระบบ</legend>
+
+        <label>Username:</label><br />
+        <input type="text" name="username" pattern="[A-Za-z0-9_]{8,}" />
+        <div><i>ประกอบด้วยตัวเลข ตัวอักษรหรือ _ ตั้งแต่ 8 ตัวขึ้นไป</i></div>
+        <br />
+        <label>Password:</label><br />
+        <input type="text" name="password" pattern=".{8,}" />
+        <div><i>ประกอบด้วยอักขระอะไรก็ได้ 8 ตัวขึ้นไป</i></div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+        <label>แพคเก็จทัวร์:</label>
+        <select name="package" required>
+          <option value="">--select--</option>
+          <option value="taiwan">Taiwan</option>
+          <option value="japan">Japan</option>
+          <option value="hongkong">Hongkong</option></select
+        ><br />
+        <label>วันที่เดินทาง:</label>
+        <input type="date" name="travel_date" /><br />
+        <label>จำนวนผู้เดินทาง : </label>
+        <input type="number" name="people" min="1" max="10" /><br />
+        <label>เน้นการท่องเที่ยวแบบใด?</label><br />
+        <input type="checkbox" name="travel_type0" value="shopping" />
+        ชอปปิ้ง<br />
+        <input type="checkbox" name="travel_type1" value="nature" />
+        ธรรมชาติ<br />
+        <input type="checkbox" name="travel_type2" value="sea" />
+        ทะเล<br />
+      </fieldset>
+      <br />
+      <label>ยอมรับเงื่อนไขและข้อตกลง</label>
+      <input type="radio" name="agree" value="yes" checked /> I agree
+      <input type="radio" name="agree" value="no" /> I disagree
+      <button type="submit">จอง</button>
+    </form>
+  </body>
+</html>

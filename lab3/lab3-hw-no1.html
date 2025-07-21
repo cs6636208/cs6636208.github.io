@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab3no1</title>
+    <style type="text/css">
+      input:invalid {
+        border: red solid 3px;
+      }
+      input,
+      input:valid {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>ข้อ 1.1 จงสร้าง Form โดยเลือกใช้ Input Type ที่เหมาะสม</h2>
+    <h3>ชื่อเต็ม/ย่อของสาขาวิชา</h3>
+    <input type="text" name="major" placeholder="computer science/cs" />
+    <h3>จำนวนเงินที่จะโอน</h3>
+    <input type="number" name="amount" placeholder="250" />
+    <h3>อาหารที่ชื่นชอบ 5 ชนิดที่ชื่นชอบจากมากไปน้อย</h3>
+    <h4>
+      อันดับ 1: <input type="text" name="food1" placeholder="ผัดกระเพรา" />
+    </h4>
+    <h4>
+      อันดับ 2: <input type="text" name="food2" placeholder="ข้าวมันไก่" />
+    </h4>
+    <h4>อันดับ 3: <input type="text" name="food3" placeholder="ราดหน้า" /></h4>
+    <h4>
+      อันดับ 4: <input type="text" name="food4" placeholder="ก๋วยเตี๋ยว" />
+    </h4>
+    <h4>
+      อันดับ 5: <input type="text" name="food5" placeholder="ข้าวแกงกะหรี่" />
+    </h4>
+    <h3>ค่าไฟฟ้า 3 เดือนที่ผ่านมา</h3>
+    <h4>
+      เดือน 1: <input type="number" name="electricity1" placeholder="1000" />
+    </h4>
+    <h4>
+      เดือน 2: <input type="number" name="electricity2" placeholder="2000" />
+    </h4>
+    <h4>
+      เดือน 3: <input type="number" name="electricity3" placeholder="3000" />
+    </h4>
+    <h3>รหัสบัตรประชาชน</h3>
+    <input type="text" name="id_card" placeholder="x-xxxx-xxxxx-xx-x" />
+    <h3>ความพึงพอใจของหนังสือเล่มนี้</h3>
+    <input type="range" name="satisfaction" min="1" max="5" />
+    <h3>อาการป่วย</h3>
+    <textarea
+      id="illness"
+      name="illness"
+      rows="6"
+      cols="40"
+      placeholder="โปรดระบุอาการ"
+    ></textarea>
+    <h3>ในช่วง 3 เดือนที่ผ่านมา เคยได้รับวัคซีนหรือไม่</h3>
+    <input type="radio" name="vaccine" value="yes" />ใช่
+    <input type="radio" name="vaccine" value="no" />ไม่ใช่
+    <h3>เวลาเริ่มเข้าเรียนและสิ้นสุดการเรียน</h3>
+    <h4>
+      เวลาเริ่มเข้าเรียน:
+      <input type="time" name="start_time" placeholder="เวลาเริ่ม" />
+      สิ้นสุดการเรียน:
+      <input type="time" name="end_time" placeholder="เวลาเสร็จ" />
+    </h4>
+    <h3>วันเวลาที่ต้องไปพบแพทย์</h3>
+    <h4>
+      วันที่:
+      <input type="date" name="appointment_date" />
+      เวลา:
+      <input type="time" name="appointment_time" />
+    </h4>
+    <h2>ข้อ 1.2 จงใช้ pattern Attribute เพื่อตรวจสอบรูปแบบของข้อมูลต่อไปนี้</h2>
+    <h3>
+      11. รหัสผ่าน 5 อักขระเป็นต้นไป ที่ต้องประกอบด้วยอักขระตัวใหญ่
+      ตัวเล็กและตัวเลข อย่างน้อยชนิดละ 1 อักขระ
+    </h3>
+    <input
+      type="text"
+      name="password"
+      pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{5,}"
+      placeholder="Abc12, Qtymp345Uzwj"
+    />
+    <h3>12. “บ้านเลขที่” เช่น 235/4 69</h3>
+    <input
+      type="text"
+      name="address"
+      pattern="\d{1,5}/\d{1,5} \d{1,5}"
+      placeholder="2132/4 78, 235/4 69"
+    />
+    <h3>
+      13. “รหัสสินค้า 3 ตัวแรกเป็นอักขระตัวใหญ่ตามด้วยตัวเลข 2 ตัวเท่านั้น” เช่น
+      AAA89
+    </h3>
+    <input
+      type="text"
+      name="product_id"
+      pattern="[A-Z]{3}\d{2}"
+      placeholder="AAA89, BBB12, CCC34"
+    />
+    <h3>14. กรอกชื่อ นามสกุล ด้วยภาษาไทยเท่านั้น</h3>
+    <input
+      type="text"
+      name="full_name"
+      pattern="^[\u0E00-\u0E7F]+ [\u0E00-\u0E7F]+$"
+      placeholder="ทองทัศน์ ลำทอง"
+    />
+  </body>
+</html>
