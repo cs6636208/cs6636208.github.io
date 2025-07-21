@@ -1,0 +1,28 @@
+/* lab2-2.html */
+
+b {
+  background-color: yellow;
+  text-decoration: underline;
+}
+
+.gray-bg {
+  background-color: gray;
+}
+
+#year {
+  color: red;
+  font-weight: bolder;
+  font-style: italic;
+}
+
+/* lab2-3.html */
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+tr:hover td {
+  background-color: greenyellow;
+}
