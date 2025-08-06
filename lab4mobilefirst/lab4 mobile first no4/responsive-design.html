@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <style>
+      .flexible,
+      .product {
+        display: flex;
+      }
+      .content {
+        display: block;
+        position: relative;
+        white-space: normal;
+        text-align: left;
+        background-color: lightgray;
+        padding-top: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .wrap {
+        text-align: center;
+        margin-top: 10px;
+        position: static;
+      }
+
+      .botton {
+        background-color: darkblue;
+        padding: 10px 10px;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+        display: inline-block;
+        font-family: sans-serif;
+        text-align: center;
+        min-width: 150px;
+      }
+
+      .botton::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f217";
+        font-weight: 900;
+        margin-right: 8px;
+      }
+
+      .wrap a {
+        text-decoration: none;
+      }
+      @media (max-width: 600px) {
+        .flexible,
+        .product {
+          display: block;
+          text-align: center;
+        }
+
+        .product img {
+          display: block;
+          margin: 0 auto;
+          max-width: 100%;
+          height: auto;
+        }
+
+        .content {
+          width: auto;
+          white-space: normal;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 20px;
+        }
+
+        .wrap {
+          width: auto;
+          margin-top: 15px;
+        }
+
+        .botton {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 10px;
+        }
+        .wrap a {
+          width: 100%;
+          display: inline-block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="flexible">
+      <div class="product">
+        <img src="imgs/clock.jpg" />
+      </div>
+
+      <div class="content">
+        Garmin Instinct, Rugged Outdoor Watch with GPS, Features GLONASS and
+        Galileo, Heart Rate Monitoring and 3-axis Compass, Tundra<br /><br />
+        <div class="wrap">
+          <a href="">
+            <div class="botton">Add to cart</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
