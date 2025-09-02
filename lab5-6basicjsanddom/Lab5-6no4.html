@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab5-6no4.html</title>
+  </head>
+  <body>
+    <form id="myForm">
+      <select id="selectNumber">
+        <option>Choose a number</option>
+      </select>
+    </form>
+
+    <script type="text/javascript">
+      // Method A
+      let select = document.getElementById("selectNumber");
+      let options = ["1", "2", "3", "4", "5"];
+
+      // Optional: Clear all existing options first:
+      select.innerHTML = "";
+      // Populate list with options:
+      for (let i = 0; i < options.length; i++) {
+        let opt = options[i];
+        select.innerHTML += '<option value="' + opt + '">' + opt + "</option>";
+      }
+
+      // Method B
+      var myArray = new Array("1", "2", "3", "4", "5");
+
+      // Get dropdown element from DOM
+      let dropdown = document.getElementById("selectNumber");
+
+      // Loop through the array
+      for (let i = 0; i < myArray.length; ++i) {
+        // Append the element to the end of Array list
+        dropdown[dropdown.length] = new Option(myArray[i], myArray[i]);
+      }
+    </script>
+  </body>
+</html>

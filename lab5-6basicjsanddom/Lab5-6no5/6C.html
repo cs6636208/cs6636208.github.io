@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form>
+      <input type="radio" name="r" value="r1" id="carsBtn" /><label>cars</label>
+      <input type="radio" name="r" value="r2" id="daysBtn" /><label>days</label>
+      <input type="radio" name="r" value="r3" id="jobsBtn" /><label>jobs</label>
+      <hr />
+      <select size="1" name="combo1" id="combo" style="width: 150px">
+        <option value="">choose radio</option>
+      </select>
+    </form>
+
+    <script>
+      let cars = ["Audi", "BMW", "Ford", "Opel", "Toyota"];
+      let days = ["Monday", "Wednesday", "Friday"];
+      let jobs = ["engineer", "salesman"];
+
+      let co = document.getElementById("combo");
+
+      function p1(nC) {
+        while (co.options.length) co.options[0] = null;
+        for (let i = 0; i < nC.length; i++) {
+          co.options[co.length] = new Option(nC[i], nC[i]);
+        }
+      }
+
+      document.getElementById("carsBtn").addEventListener("click", function () {
+        p1(cars);
+      });
+
+      document.getElementById("daysBtn").addEventListener("click", function () {
+        p1(days);
+      });
+
+      document.getElementById("jobsBtn").addEventListener("click", function () {
+        p1(jobs);
+      });
+    </script>
+  </body>
+</html>

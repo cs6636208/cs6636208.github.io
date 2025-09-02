@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form id="myForm">
+      <input type="radio" name="r" value="cars" id="carsRadio" /><label
+        for="carsRadio"
+        >cars</label
+      >
+      <input type="radio" name="r" value="days" id="daysRadio" /><label
+        for="daysRadio"
+        >days</label
+      >
+      <input type="radio" name="r" value="jobs" id="jobsRadio" /><label
+        for="jobsRadio"
+        >jobs</label
+      >
+      <hr />
+      <select size="1" name="combo1" id="combo1" style="width: 150px">
+        <option value="">choose radio</option>
+      </select>
+    </form>
+    <script>
+      const cars = ["Audi", "BMW", "Ford", "Opel", "Toyota"];
+      const days = ["Monday", "Wednesday", "Friday"];
+      const jobs = ["engineer", "salesman"];
+
+      function updateCombo(optionsArray) {
+        const combo = document.getElementById("combo1");
+        combo.innerHTML = '<option value="">choose radio</option>';
+        optionsArray.forEach((opt) => {
+          const option = document.createElement("option");
+          option.value = opt;
+          option.text = opt;
+          combo.appendChild(option);
+        });
+      }
+
+      document
+        .getElementById("carsRadio")
+        .addEventListener("click", function () {
+          updateCombo(cars);
+        });
+      document
+        .getElementById("daysRadio")
+        .addEventListener("click", function () {
+          updateCombo(days);
+        });
+      document
+        .getElementById("jobsRadio")
+        .addEventListener("click", function () {
+          updateCombo(jobs);
+        });
+    </script>
+  </body>
+</html>

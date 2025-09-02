@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio + Select Example</title>
+  </head>
+  <body>
+    <h2>เลือกหมวดหมู่</h2>
+    <form id="myForm">
+      <label> <input type="radio" name="r" value="cars" /> Cars </label>
+      <label> <input type="radio" name="r" value="days" /> Days </label>
+      <label> <input type="radio" name="r" value="jobs" /> Jobs </label>
+      <hr />
+      <select id="combo1" name="combo1" style="width: 150px">
+        <option value="">choose radio</option>
+      </select>
+    </form>
+
+    <script>
+      const cars = ["Audi", "BMW", "Ford", "Opel", "Toyota"];
+      const days = ["Monday", "Wednesday", "Friday"];
+      const jobs = ["Engineer", "Salesman"];
+
+      const combo = document.getElementById("combo1");
+      const radios = document.querySelectorAll('input[name="r"]');
+
+      function updateOptions(arr) {
+        combo.innerHTML = "";
+        arr.forEach((item) => {
+          const opt = document.createElement("option");
+          opt.value = item;
+          opt.textContent = item;
+          combo.appendChild(opt);
+        });
+      }
+
+      radios.forEach((radio) => {
+        radio.addEventListener("change", () => {
+          if (radio.value === "cars") updateOptions(cars);
+          if (radio.value === "days") updateOptions(days);
+          if (radio.value === "jobs") updateOptions(jobs);
+        });
+      });
+    </script>
+  </body>
+</html>

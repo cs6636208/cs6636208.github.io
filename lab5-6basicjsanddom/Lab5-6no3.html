@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab5-6no3.html</title>
+    <script type="text/javascript">
+      function CheckColorText() {
+        let Name = document.getElementById("username");
+        let Age = document.getElementById("age");
+        let Birthdate = document.getElementById("birthdate");
+        Name.style.color = "green";
+        Age.style.color = "green";
+        Birthdate.style.color = "green";
+      }
+    </script>
+  </head>
+  <body>
+    Name: <input type="text" id="username" onchange="CheckColorText()" /> <br />
+    Age: <input type="text" id="age" onchange="CheckColorText()" /> <br />
+    Birthdate: <input type="text" id="birthdate" onchange="CheckColorText()" />
+  </body>
+</html>
